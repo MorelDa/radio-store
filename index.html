@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Store · Apps para escuchar y mirar</title>
+<meta name="description" content="Descargá las aplicaciones de Radio Renueva: la radio en vivo, Renueva TV y más.">
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+
+<header class="barra">
+  <a class="marca" href="#/">
+    <span class="marca__logo">RS</span>
+    <span class="marca__txt">Radio<b>Store</b></span>
+  </a>
+  <div class="buscador">
+    <span class="lupa">🔍</span>
+    <input id="q" type="search" placeholder="Buscar apps" autocomplete="off">
+  </div>
+</header>
+
+<!-- ── Portada (lista de apps) ── -->
+<main id="portada" class="portada">
+  <h1 class="titulo-seccion">Nuestras apps</h1>
+  <div id="lista" class="rejilla"></div>
+  <p id="vacio" class="vacio">No encontramos apps con ese nombre.</p>
+
+  <section class="bloque-info">
+    <h2>Instalar es fácil</h2>
+    <ul>
+      <li><b>1.</b> Tocá <b>Instalar</b> en la app que quieras.</li>
+      <li><b>2.</b> Se descarga el archivo <b>.apk</b> (unos 72 MB).</li>
+      <li><b>3.</b> Abrilo y aceptá los permisos: en Android pedí <b>"Instalar apps desconocidas"</b> para tu navegador.</li>
+      <li><b>4.</b> Listo: la radio suena y queda en tu pantalla de inicio.</li>
+    </ul>
+    <p class="chicos">Nuestras apps no piden datos de pago ni tarjetas. Solo permiso de internet y, si querés, notificaciones.</p>
+  </section>
+</main>
+
+<!-- ── Ficha de la app ── -->
+<main id="ficha" class="ficha oculto">
+  <button id="volver" class="volver">‹ Volver a Radio Store</button>
+
+  <section class="cabecera">
+    <img id="appIcono" class="cabecera__icono" alt="" src="assets/icon-radio-renueva.png">
+    <div class="cabecera__datos">
+      <h1 id="appNombre" class="cabecera__titulo"></h1>
+      <a id="appDev" class="cabecera__dev" href="#/"></a>
+      <div class="cabecera__chips">
+        <span class="chip" id="appPuntuacion"></span>
+        <span class="chip" id="appDescargas"></span>
+        <span class="chip" id="appCategoria"></span>
+      </div>
+    </div>
+    <div class="cabecera__accion">
+      <button id="btnInstalar" class="instalar">Instalar</button>
+      <span class="peso" id="appTamano"></span>
+    </div>
+  </section>
+
+  <section class="tiras">
+    <h2 class="titulo-seccion">Capturas de pantalla</h2>
+    <div class="capturas" id="appCapturas"></div>
+  </section>
+
+  <div class="columnas">
+    <section class="tarjeta">
+      <h2>Sobre esta app</h2>
+      <p id="appDescripcion" class="texto"></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Novedades</h2>
+      <p id="appNovedades" class="texto"></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Información de la app</h2>
+      <ul class="datos" id="appInfo"></ul>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Compatibilidad</h2>
+      <p id="appCompat" class="texto"></p>
+      <ul class="datos">
+        <li><b>Requiere</b> <span id="appRequiere"></span></li>
+        <li><b>Paquete</b> <span id="appPaquete"></span></li>
+        <li><b>Clasificación</b> <span id="appClasificacion"></span></li>
+        <li><b>Descargas</b> <span id="appDescargas2"></span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="bloque-info bloque-info--descarga">
+    <h2>Descargar <span id="appNombre2"></span></h2>
+    <p class="chicos">Archivo APK · Android 7.0 o superior · <span id="appTamano2"></span></p>
+    <a id="btnDescargar" class="instalar instalar--ancho" href="#" download>Descargar APK</a>
+    <p class="chicos">
+      Si al abrirlo Android te pide permiso, entrá a <b>Ajustes › Apps › acceso especial › instalar apps desconocidas</b>
+      y activalo para el navegador o archivos que estás usando.
+    </p>
+  </section>
+
+  <p class="pie">Radio Store · Aplicaciones de Radio Renueva</p>
+</main>
+
+<div id="cargando" class="cargando">Cargando…</div>
+
+<script src="js/store.js"></script>
+</body>
+</html>
