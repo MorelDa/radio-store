@@ -2,55 +2,81 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radio Store · Apps para escuchar y mirar</title>
-<meta name="description" content="Descargá las aplicaciones de Radio Renueva: la radio en vivo, Renueva TV y más.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radio Store · Todas las radios en un solo lugar</title>
+<meta name="description" content="Descargá las mejores radios online. Aplicaciones Android con radio en vivo, TV y avisos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/store.css">
 </head>
 <body>
 
+<!-- Fondo animado 3D -->
+<div class="escena" aria-hidden="true">
+  <span class="esfera e1"></span>
+  <span class="esfera e2"></span>
+  <span class="esfera e3"></span>
+  <span class="rejilla"></span>
+</div>
+
 <header class="barra">
-  <a class="marca" href="#/">
-    <span class="marca__logo">RS</span>
+  <a class="marca" href="#/" aria-label="Radio Store">
+    <span class="play3d">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.9a1.4 1.4 0 0 0-.6 1.2v17.8c0 .9 1 1.4 1.8 1L21 12.9c.7-.4.7-1.4 0-1.8L4.8 1.9c-.5-.3-1-.2-1.2 0z"/></svg>
+    </span>
     <span class="marca__txt">Radio<b>Store</b></span>
   </a>
+
   <div class="buscador">
-    <span class="lupa">🔍</span>
-    <input id="q" type="search" placeholder="Buscar apps" autocomplete="off">
+    <svg class="lupa" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+    <input id="q" type="search" placeholder="Buscar radios y apps" autocomplete="off">
   </div>
+
+  <a class="avatar" href="#/" title="Radio Store">RS</a>
 </header>
 
-<!-- ── Portada (lista de apps) ── -->
+<!-- ══════════ PORTADA ══════════ -->
 <main id="portada" class="portada">
-  <h1 class="titulo-seccion">Nuestras apps</h1>
-  <div id="lista" class="rejilla"></div>
-  <p id="vacio" class="vacio">No encontramos apps con ese nombre.</p>
+  <section class="hero">
+    <h1 class="hero__titulo">Todas las radios,<br><span>en un solo lugar</span></h1>
+    <p class="hero__txt">Descargá las aplicaciones Android de nuestras emisoras y escuchá en vivo desde el celular.</p>
+  </section>
 
-  <section class="bloque-info">
-    <h2>Instalar es fácil</h2>
-    <ul>
-      <li><b>1.</b> Tocá <b>Instalar</b> en la app que quieras.</li>
-      <li><b>2.</b> Se descarga el archivo <b>.apk</b> (unos 72 MB).</li>
-      <li><b>3.</b> Abrilo y aceptá los permisos: en Android pedí <b>"Instalar apps desconocidas"</b> para tu navegador.</li>
-      <li><b>4.</b> Listo: la radio suena y queda en tu pantalla de inicio.</li>
-    </ul>
-    <p class="chicos">Nuestras apps no piden datos de pago ni tarjetas. Solo permiso de internet y, si querés, notificaciones.</p>
+  <h2 class="titulo-seccion">Apps disponibles</h2>
+  <div id="lista" class="rejilla"></div>
+  <p id="vacio" class="vacio oculto">No encontramos apps con ese nombre.</p>
+
+  <h2 class="titulo-seccion">Próximamente</h2>
+  <div id="proximas" class="rejilla rejilla--vacias"></div>
+
+  <section class="tarjeta pasos">
+    <h2>Cómo instalar en 4 pasos</h2>
+    <ol>
+      <li><b>1.</b> Tocá el botón <b>Instalar</b> de la radio que quieras.</li>
+      <li><b>2.</b> Se descarga el archivo <b>.apk</b> (unos 72&nbsp;MB).</li>
+      <li><b>3.</b> Abrilo y, si Android te pide, activá <b>"Instalar apps desconocidas"</b> para tu navegador.</li>
+      <li><b>4.</b> Listo: queda en tu pantalla de inicio y la radio suena al abrirla.</li>
+    </ol>
+    <p class="chicos">Nuestras apps no piden tarjetas ni datos de pago. Solo internet y, si querés, notificaciones.</p>
   </section>
 </main>
 
-<!-- ── Ficha de la app ── -->
+<!-- ══════════ FICHA DE LA APP ══════════ -->
 <main id="ficha" class="ficha oculto">
   <button id="volver" class="volver">‹ Volver a Radio Store</button>
 
   <section class="cabecera">
-    <img id="appIcono" class="cabecera__icono" alt="" src="assets/icon-radio-renueva.png">
+    <div class="cabecera__icono"><img id="appIcono" alt="" src=""></div>
     <div class="cabecera__datos">
       <h1 id="appNombre" class="cabecera__titulo"></h1>
-      <a id="appDev" class="cabecera__dev" href="#/"></a>
-      <div class="cabecera__chips">
-        <span class="chip" id="appPuntuacion"></span>
-        <span class="chip" id="appDescargas"></span>
-        <span class="chip" id="appCategoria"></span>
+      <span id="appDev" class="cabecera__dev"></span>
+      <div class="meta">
+        <span class="meta__item"><b id="appPuntuacion">5.0</b><small>★rating</small></span>
+        <span class="meta__sep"></span>
+        <span class="meta__item"><b id="appDescargas">10+</b><small>descargas</small></span>
+        <span class="meta__sep"></span>
+        <span class="meta__item"><b id="appCategoria">—</b><small>categoría</small></span>
       </div>
     </div>
     <div class="cabecera__accion">
@@ -59,7 +85,7 @@
     </div>
   </section>
 
-  <section class="tiras">
+  <section class="bloque">
     <h2 class="titulo-seccion">Capturas de pantalla</h2>
     <div class="capturas" id="appCapturas"></div>
   </section>
@@ -69,44 +95,57 @@
       <h2>Sobre esta app</h2>
       <p id="appDescripcion" class="texto"></p>
     </section>
-
     <section class="tarjeta">
       <h2>Novedades</h2>
       <p id="appNovedades" class="texto"></p>
     </section>
-
     <section class="tarjeta">
       <h2>Información de la app</h2>
       <ul class="datos" id="appInfo"></ul>
     </section>
-
     <section class="tarjeta">
       <h2>Compatibilidad</h2>
       <p id="appCompat" class="texto"></p>
       <ul class="datos">
-        <li><b>Requiere</b> <span id="appRequiere"></span></li>
-        <li><b>Paquete</b> <span id="appPaquete"></span></li>
-        <li><b>Clasificación</b> <span id="appClasificacion"></span></li>
-        <li><b>Descargas</b> <span id="appDescargas2"></span></li>
+        <li><b>Requiere</b><span id="appRequiere"></span></li>
+        <li><b>Paquete</b><span id="appPaquete"></span></li>
+        <li><b>Clasificación</b><span id="appClasificacion"></span></li>
+        <li><b>Descargas</b><span id="appDescargas2"></span></li>
+      </ul>
+    </section>
+    <section class="tarjeta rating">
+      <h2>Valoraciones</h2>
+      <div class="rating__cuerpo">
+        <div class="rating__grande">
+          <b id="appPuntuacion2">5.0</b>
+          <div class="estrellas">★★★★★</div>
+          <small id="appResenias">1 reseña</small>
+        </div>
+        <ul class="barras" id="appBarras"></ul>
+      </div>
+    </section>
+    <section class="tarjeta">
+      <h2>Seguridad de los datos</h2>
+      <ul class="seguridad">
+        <li>✓ No recopila datos personales</li>
+        <li>✓ No comparte información con terceros</li>
+        <li>✓ Solo necesita internet para reproducir la radio</li>
+        <li>✓ Envío de avisos solo si vos lo autorizás</li>
       </ul>
     </section>
   </div>
 
-  <section class="bloque-info bloque-info--descarga">
-    <h2>Descargar <span id="appNombre2"></span></h2>
-    <p class="chicos">Archivo APK · Android 7.0 o superior · <span id="appTamano2"></span></p>
-    <a id="btnDescargar" class="instalar instalar--ancho" href="#" download>Descargar APK</a>
-    <p class="chicos">
-      Si al abrirlo Android te pide permiso, entrá a <b>Ajustes › Apps › acceso especial › instalar apps desconocidas</b>
-      y activalo para el navegador o archivos que estás usando.
-    </p>
+  <section class="tarjeta descarga">
+    <h2>Descargar APK</h2>
+    <p class="chicos">Android 7.0 o superior · <span id="appTamano2"></span> · archivo .apk</p>
+    <a id="btnDescargar" class="instalar instalar--ancho" href="#" download>Descargar Radio Renueva FM</a>
+    <p class="chicos">Si Android te pide permiso: <b>Ajustes › Apps › acceso especial › instalar apps desconocidas</b> y activalo para el navegador.</p>
   </section>
 
-  <p class="pie">Radio Store · Aplicaciones de Radio Renueva</p>
+  <p class="pie">Radio Store · Aplicaciones para escuchar radio y TV</p>
 </main>
 
 <div id="cargando" class="cargando">Cargando…</div>
-
 <script src="js/store.js"></script>
 </body>
 </html>

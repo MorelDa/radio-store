@@ -1,30 +1,41 @@
-[
-  {
-    "id": "radio-renueva",
-    "nombre": "Radio Renueva FM",
-    "desarrollador": "Radio Renueva",
-    "icono": "assets/icon-radio-renueva.png",
-    "categoria": "Música y audio",
-    "descripcionCorta": "Escuchá Radio Renueva FM en vivo. Tu conexión con la fe.",
-    "descripcion": "Escuchá Radio Renueva FM San Antonio, Paraguay, donde la música, la palabra y la oración llegan a tu hogar las 24 horas del día.\n\nLa app está hecha para que sea simple y rápida:\n\n• Pulsá PLAY y la radio empieza a sonar al instante.\n• Reproducción en segundo plano: seguí escuchando con la pantalla apagada, desde la notificación o con auriculares.\n• Renueva TV: mirá la señal de video en vivo desde el celular.\n• Carruseles con promos y novedades que se actualizan solos.\n• Avisos importantes directo en tu teléfono.\n• Menú con nuestras redes sociales, quiénes somos y contacto.",
-    "novedades": "• Ícono y notificación del reproductor rediseñados.\n• Los carruseles ahora se actualizan sin instalar nada.\n• Avisos de la radio en la bandeja de notificaciones.",
-    "capturas": [
-      "assets/shots/01-inicio.jpg",
-      "assets/shots/02-menu.jpg",
-      "assets/shots/03-tv.jpg",
-      "assets/shots/04-notificacion.jpg",
-      "assets/shots/05-splash.jpg"
-    ],
-    "version": "1.0.0",
-    "tamano": "72 MB",
-    "actualizado": "3 de octubre de 2026",
-    "requiere": "Android 7.0 o superior",
-    "descargas": "10+",
-    "puntuacion": "5.0",
-    "resenias": 1,
-    "contenido": "3",
-    "clasificacion": "Todos",
-    "paquete": "com.radiorenueva",
-    "descarga": "https://github.com/MorelDa/RADIO-RENUEVA-FM/releases/download/v1.0.0/app-release.apk"
-  }
-]
+{
+  "titulo": "Radio Store",
+  "lema": "Todas las radios en un solo lugar",
+  "apps": [
+    {
+      "id": "radio-renueva",
+      "nombre": "Radio Renueva FM",
+      "desarrollador": "Radio Renueva",
+      "icono": "assets/icon-radio-renueva.png",
+      "categoria": "Música y audio",
+      "descripcionCorta": "La radio en vivo de San Antonio, Paraguay. Tu conexión con la fe, 24 horas.",
+      "descripcion": "Escuchá Radio Renueva FM San Antonio, Paraguay, donde la música, la palabra y la oración llegan a tu hogar las 24 horas del día.\n\nLa app está hecha para que sea simple y rápida:\n\n• Pulsá PLAY y la radio empieza a sonar al instante al abrir la app.\n• Reproducción en segundo plano: seguí escuchando con la pantalla apagada, desde la notificación o con auriculares.\n• Avisos de la radio directo en la bandeja de notificaciones.\n• Carruseles con promos y novedades que se actualizan solos, sin instalar nada.\n• Menú con redes sociales, quiénes somos, contacto y la página web.\n• Interfaz de una sola pantalla: todo se ve sin deslizar.",
+      "novedades": "• Ícono y notificación del reproductor rediseñados.\n• Los carruseles ahora se actualizan solos.\n• Avisos de la radio en la bandeja de notificaciones.\n• Pantalla de bienvenida con barra de progreso.",
+      "capturas": [
+        "assets/shots/01-inicio.jpg",
+        "assets/shots/02-menu.jpg",
+        "assets/shots/03-reproductor.jpg",
+        "assets/shots/04-web.jpg",
+        "assets/shots/05-splash.jpg"
+      ],
+      "puntuacion": "5.0",
+      "resenias": 1,
+      "descargas": "10+",
+      "version": "1.0.0",
+      "tamano": "72 MB",
+      "actualizado": "3 de octubre de 2026",
+      "lanzado": "3 de octubre de 2026",
+      "requiere": "Android 7.0 o superior",
+      "clasificacion": "Todos",
+      "contenido": "Sin anuncios",
+      "paquete": "com.radiorenueva",
+      "descarga": "https://github.com/MorelDa/RADIO-RENUEVA-FM/releases/download/v1.0.0/app-release.apk",
+      "estado": "disponible"
+    }
+  ],
+  "proximas": [
+    { "nombre": "Max FM", "categoria": "Música y audio" },
+    { "nombre": "Radio Favorita", "categoria": "Música y audio" },
+    { "nombre": "Radio Party", "categoria": "Música y audio" }
+  ]
+}
